@@ -1,14 +1,7 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-
 const NotFound = () => {
   return (
     <>
-      <Helmet>
-        <title>404- Amit Banik</title>
-        <meta name="description" content="Womp womp try again." />
-      </Helmet>
-
       <div className="container text-center" style={{ paddingTop: "150px" }}>
         <img
           src="/images/Memoji.webp"
