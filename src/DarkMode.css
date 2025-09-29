@@ -1,0 +1,123 @@
+/* --- THEME & COLOR DEFINITIONS --- */
+:root {
+  --accent-color: #32CD32;
+  --accent-color-glow: rgba(50, 205, 50, 0.4);
+  --accent-text-color: #ffffff;
+    --accordion-active-bg: #f8f9fa;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #121212;
+  --bs-body-color: #e0e0e0;
+  --bs-tertiary-bg: #1e1e1e;
+  --bs-border-color: #333;
+  --accent-color: #00ffff;
+  --accent-color-glow: rgba(0, 255, 255, 0.3);
+  --accent-text-color: #121212;
+    --accordion-active-bg: #2a2a2a
+}
+
+/* --- GLOBAL STYLES --- */
+body,
+.bg-body-tertiary,
+.card,
+.form-control {
+  transition: background-color 0.35s ease-in-out, border-color 0.35s ease-in-out;
+}
+
+/* --- COMPONENT STYLES --- */
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.35s ease-in-out, border-color 0.35s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+.experience-wrapper .card {
+  margin: 6px 0;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--accordion-active-bg);
+  color: var(--bs-body-color);
+  box-shadow: none;
+}
+
+/* Buttons */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover,
+.btn-outline-light:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--accent-text-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-secondary:hover {
+  background-color: transparent;
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-secondary.active {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--accent-text-color);
+}
+
+/* Header nav links */
+.nav-link {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 8px var(--accent-color-glow);
+}
+
+[data-bs-theme="dark"] .nav-link {
+  color: var(--bs-body-color);
+}
+
+[data-bs-theme="dark"] .nav-link:hover {
+  color: #ffffff;
+}
+
+/* Footer Icons */
+.no-link-color a {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.no-link-color a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--accent-color-glow);
+}
+
+/* Theme Toggle Button */
+.btn > .bi-moon-stars-fill,
+.btn > .bi-sun-fill {
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.btn:has(> .bi-moon-stars-fill):hover,
+.btn:has(> .bi-sun-fill):hover {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.btn:has(> .bi-moon-stars-fill):hover > .bi-moon-stars-fill,
+.btn:has(> .bi-sun-fill):hover > .bi-sun-fill {
+  color: var(--accent-color);
+}

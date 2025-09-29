@@ -1,0 +1,90 @@
+body {
+  background-color: transparent !important;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.no-link-color a {
+  text-decoration: none !important;
+}
+
+.no-link-color a i {
+  color: #6c757d;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.no-link-color a:hover i {
+  color: var(--accent-color);
+}
+
+.scroller {
+  overflow-x: auto;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.scroller-inner {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 0.95rem;
+  }
+  
+  h1,
+  .h1 {
+    font-size: 1.75rem;
+  }
+  h2,
+  .h2 {
+    font-size: 1.5rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.2rem;
+  }
+  h5,
+  .h5 {
+    font-size: 1.1rem;
+  }
+
+  .container.py-4 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
