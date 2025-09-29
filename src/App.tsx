@@ -6,7 +6,6 @@ import WebglBackground from "./components/WebglBackground";
 import Header from "./pages/Header";
 import Footer from "./pages/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 import { lazy, Suspense } from "react";
 
 const Home = lazy(() => import("./pages/Home"));
@@ -18,26 +17,24 @@ function App() {
   return (
     <>
       <WebglBackground />
-      <HelmetProvider>
-        <BrowserRouter>
-          <Header />
-          <main>
-            <Suspense
-              fallback={
-                <div className="container text-center py-5">Loading...</div>
-              }
-            >
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/projects" element={<AllProjects />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-        </BrowserRouter>
-      </HelmetProvider>
+      <BrowserRouter>
+        <Header />
+        <main>
+          <Suspense
+            fallback={
+              <div className="container text-center py-5">Loading...</div>
+            }
+          >
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<AllProjects />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
