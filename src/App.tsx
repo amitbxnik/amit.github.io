@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <WebglBackground />
-      <BrowserRouter basename="/amitbxnik.github.io">
+      <BrowserRouter basename="/">
         <Header />
         <main>
           <Suspense
