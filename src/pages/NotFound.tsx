@@ -12,7 +12,7 @@ const NotFound = () => {
         <h1 className="display-1">404</h1>
         <h2>Page Not Found</h2>
         <p className="lead text-secondary">
-          Sorry, the page you are looking for does not exist.
+          Sorry, the page you are looking for doesn't exist!
         </p>
         <Link to="/" className="btn btn-outline-secondary mt-3">
           <i className="bi bi-arrow-left me-2"></i>
