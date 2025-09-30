@@ -7,11 +7,11 @@ import Header from "./pages/Header";
 import Footer from "./pages/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import NotFound from "./pages/NotFound";
 
 const Home = lazy(() => import("./pages/Home"));
 const AllProjects = lazy(() => import("./pages/AllProjects"));
 const Contact = lazy(() => import("./pages/Contact"));
-const NotFound = lazy(() => import("./pages/NotFound"));
 
 function App() {
   return (
