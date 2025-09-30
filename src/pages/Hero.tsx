@@ -25,7 +25,7 @@ const Hero = () => {
 
             <div className="d-flex justify-content-center justify-content-lg-start align-items-center gap-3 no-link-color pt-4">
               <a
-                href="/AmitBanikResume.pdf"
+                href="/Amit_Banik_SWE_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-secondary"
