@@ -6,7 +6,7 @@
   "homepage": "https://amitbxnik.github.io",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && cp dist/index.html dist/404.html",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "npm run build && cp -r dist/* . && git add . && git commit -m 'Deploy to GitHub Pages' && git push"
